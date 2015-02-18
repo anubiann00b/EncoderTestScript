@@ -14,10 +14,10 @@ public class Robot extends SampleRobot {
     
     public Robot() {
         stick = new Joystick(0);
-        encoder1 = new Encoder(1,2);
-        encoder2 = new Encoder(3,4);
-        encoder3 = new Encoder(5,6);
-        encoder4 = new Encoder(7,8);
+        encoder1 = new Encoder(0,1);
+        encoder2 = new Encoder(2,3);
+        encoder3 = new Encoder(4,5);
+        encoder4 = new Encoder(6,7);
     }
     
     public void operatorControl() {
