@@ -11,13 +11,15 @@ public class Robot extends SampleRobot {
     Encoder encoder2;
     Encoder encoder3;
     Encoder encoder4;
+    Encoder winch;
     
     public Robot() {
         stick = new Joystick(0);
         encoder1 = new Encoder(0,1);
-        encoder2 = new Encoder(2,3);
-        encoder3 = new Encoder(4,5);
-        encoder4 = new Encoder(6,7);
+        encoder2 = new Encoder(3,2);
+        encoder3 = new Encoder(5,4);
+        encoder4 = new Encoder(7,6);
+        winch = new Encoder(9,8);        
     }
     
     public void operatorControl() {
@@ -26,7 +28,8 @@ public class Robot extends SampleRobot {
                     encoder1.get() + " " + 
                     encoder2.get() + " " + 
                     encoder3.get() + " " +
-                    encoder4.get());
+                    encoder4.get() + " " +
+                    winch.get());
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
